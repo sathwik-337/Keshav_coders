@@ -1,8 +1,22 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect,useState} from "react";
 import axios from "axios";
 import { useUser } from "@clerk/nextjs";
+import { UserDetailContext } from "@/context/UserDetailContext";
+
+
+
+
+
+export type UsersDetails={
+  name:string,
+  email:string,
+  credits:number
+}
+
+
+
 
 function Provider({
   children,
@@ -11,12 +25,14 @@ function Provider({
 }) {
 
   const { user, isLoaded } = useUser();
+  const [userDetails,setUserDetails]=useState<any>();
 
   // ✅ Create user in DB
   const createNewUser = async () => {
     try {
       const result = await axios.post("/api/users");
       console.log("User synced:", result.data);
+      setUserDetails(result.data);
     } catch (error) {
       console.error("User creation failed:", error);
     }
@@ -28,7 +44,13 @@ function Provider({
     createNewUser();
   }, [user, isLoaded]);
 
-  return <div>{children}</div>;
+  return(
+   <div>
+    <UserDetailContext.Provider value={{userDetails,setUserDetails}}>
+
+    {children}
+    </UserDetailContext.Provider>
+    </div>);
 }
 
 export default Provider;
