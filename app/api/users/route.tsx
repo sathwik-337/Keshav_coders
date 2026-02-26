@@ -29,8 +29,8 @@ export async function POST(req: NextRequest) {
       const result = await db
         .insert(usersTable)
         .values({
-          name: user.fullName,
-          email: email,
+          name: user.fullName ?? "",
+          email: email!,
           credit: 10,
         })
         .returning();

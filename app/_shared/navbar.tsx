@@ -14,16 +14,20 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="text-2xl font-bold tracking-tight text-gray-900 cursor-pointer">
-          SehatSathi
+         <img src="/logo.jpeg" alt="logo" width={100} />
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-10 text-gray-700 font-medium">
           {["Home", "Features", "About", "Contact"].map((item) => (
-            <a key={item} href="#" className="relative group">
+            <Link 
+              key={item} 
+              href={item === "Home" ? "/" : `#${item.toLowerCase()}`} 
+              className="relative group cursor-pointer"
+            >
               {item}
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -43,9 +47,11 @@ const Navbar = () => {
               <UserButton afterSignOutUrl="/" />
 
               {/* ✅ Dashboard only when logged in */}
+              <Link href="/dashboard">
               <button className="bg-black text-white px-5 py-2.5 rounded-xl font-medium hover:scale-105 transition duration-300 shadow-md">
                 Dashboard
               </button>
+              </Link>
             </>
           )}
 
@@ -65,9 +71,14 @@ const Navbar = () => {
         <div className="md:hidden bg-white border-t border-gray-200 px-6 py-6 space-y-5 text-gray-700">
 
           {["Home", "Features", "About", "Contact"].map((item) => (
-            <a key={item} href="#" className="block text-lg">
+            <Link 
+              key={item} 
+              href={item === "Home" ? "/" : `/#${item.toLowerCase()}`}
+              className="block text-lg"
+              onClick={() => setMenuOpen(false)}
+            >
               {item}
-            </a>
+            </Link>
           ))}
 
           {!user ? (
