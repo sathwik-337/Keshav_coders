@@ -1,120 +1,122 @@
-
-
-# Project Details
-
-## Project Name
-
 SehatSathi — AI Voice Medical Assistant
 
-## Problem Statement ID
+Project Details
 
+Project Name:
+SehatSathi — AI Voice Medical Assistant
+
+Problem Statement ID:
 PS01SW
 
-## Team Name
-
+Team Name:
 Keshav Coders
 
-## College Name
-
+College Name:
 St Aloysius (Deemed To Be University)
 
----
+Problem Statement:
 
-# Problem Statement
+Access to primary healthcare remains a major challenge in semi-urban and rural regions. Many communities face a shortage of doctors, limited medical facilities, long travel distances to hospitals, and delayed medical attention. Language barriers and low digital literacy further prevent people from seeking timely healthcare support.
+
+Proposed Solution:
+
+We propose an AI-powered Intelligent Medical Assistant designed to simplify access to primary healthcare in semi-urban and rural areas.
+
+The system functions as a smart medical chatbot that listens to users, understands their symptoms, and provides real-time guidance. Users can describe their health issues either through voice input or text. The system processes the input using Artificial Intelligence and Natural Language Processing (NLP) techniques to analyze symptoms and generate appropriate medical guidance.
+
+Innovation and Creativity:
+
+*Accessibility
+Designed to cater specifically to the rural population, ensuring user-friendly interaction with minimal technological barriers.
+
+*Language Support
+Incorporates regional and local languages to facilitate better communication and understanding among diverse user groups in rural areas.
+
+*Voice-Based Interaction
+Utilizes voice-based interaction to assist illiterate users, making healthcare guidance accessible to everyone regardless of literacy levels.
+
+Tech Stack and Complexity:
+Frontend
+
+*Next.js – Website framework
+
+*Tailwind CSS – Design and styling
+
+*Framer Motion – Animations
+
+*Vapi – Voice AI calls
+
+*Web Speech API – Converts speech to text
+
+*jsPDF – Creates downloadable reports
+
+Backend
+
+*Next.js API Routes – Backend functions
+
+*PostgreSQL (Neon) – Database for storing users and chats
+
+*Drizzle ORM – Simplified database interaction
+
+*Clerk – Authentication and login system
+
+Artificial Intelligence
+
+Different AI models are used for specific tasks:
+
+*Task	- AI Model
+*Choose Doctor	- Gemini 2.5 Flash Lite
+*Conversation	- GPT-4o mini
+*Report Generation -	GPT-4o mini
+
+Voice Processing
+
+Web Speech API converts user speech into text.
+
+The text is sent to Vapi.
+
+Vapi processes it using the AI Doctor persona.
+
+The AI generates a response.
+
+The response is converted back into voice output.
+
+
+Database
+
+Database: PostgreSQL (Neon)
+
+Users Table
+
+Stores the following fields:
+
+name
+
+email
+
+credits
+
+This acts as a user account record within the system.
 
 
 
----
+Usability and Impact
 
-# Proposed Solution
-
-
----
-
-# Innovation and Creativity
-
-
----
-
-# Tech Stack and Complexity
-
-## Frontend
+The system is designed to provide primary healthcare guidance for semi-urban and rural populations. It aims to reduce delays in medical consultation, improve healthcare accessibility, and assist users in understanding their health conditions through AI-powered interaction.
 
 
 
-## Backend
-
-
-
-## Artificial Intelligence
-
-
-
-## Voice Processing
-
-
-
-## Database
-
-
-
-## Technical Complexity
-
-
-
----
-
-# Usability and Impact
-
-## Usability
-
-
-
-## Impact
-
-
----
-
-# Setup Instructions
-
-
-
-
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
+Setup Instructions
+Step 1: Clone the Repository
+git clone https://github.com/sathwik-337/Keshav_coders.git
+Step 2: Install Dependencies
+npm install
+Step 3: Run the Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Step 4: Open in Browser
+http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Presentation Link
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> origin/master
+https://www.canva.com/design/DAHCXY0Zn1I/1pqmXKIvUEDM0yUNokbbTg/edit?utm_content=DAHCXY0Zn1I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
